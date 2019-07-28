@@ -1,8 +1,16 @@
-# Gigasecond
+# Two Fer
 
-Calculate the moment when someone has lived for 10^9 seconds.
+`Two-fer` or `2-fer` is short for two for one. One for you and one for me.
 
-A gigasecond is 10^9 (1,000,000,000) seconds.
+```text
+"One for X, one for me."
+```
+
+When X is a name or "you".
+
+If the given name is "Alice", the result should be "One for Alice, one for me."
+If no name is given, the result should be "One for you, one for me."
+
 
 * * * *
 
@@ -20,16 +28,16 @@ the test file.
 
 Run the tests from the exercise directory using the following command:
 
-    ruby gigasecond_test.rb
+    ruby two_fer_test.rb
 
 To include color from the command line:
 
-    ruby -r minitest/pride gigasecond_test.rb
+    ruby -r minitest/pride two_fer_test.rb
 
 
 ## Source
 
-Chapter 9 in Chris Pine's online Learn to Program tutorial. [http://pine.fm/LearnToProgram/?Chapter=09](http://pine.fm/LearnToProgram/?Chapter=09)
+[https://en.wikipedia.org/wiki/Two-fer](https://en.wikipedia.org/wiki/Two-fer)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
