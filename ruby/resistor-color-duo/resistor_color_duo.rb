@@ -14,6 +14,6 @@ class ResistorColorDuo
 
 
   def self.value(resister_colors)
-    COLORS.values_at(resister_colors).join.to_i
+    resister_colors.map { |c| COLORS[c.to_sym] }.join.to_i
   end
 end
