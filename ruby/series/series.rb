@@ -1,21 +1,13 @@
 class Series
+  attr_reader :str
+
   def initialize(str)
     @str = str
   end
 
   def slices(digits)
-    n = @str.length - digits + 1
-    arr = []
-    i = 0
+    raise ArgumentError if str.length < digits
 
-    if n > 0
-      n.times do
-        arr << @str[i, digits]
-        i += 1
-      end
-      return arr
-    else
-      raise ArgumentError
-    end
+    str.chars.each_cons(digits).map(&:join)
   end
 end
