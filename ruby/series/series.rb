@@ -4,7 +4,8 @@ class Series
   end
 
   def slices(digits)
-    raise ArgumentError if str.length < digits
+    error_message = "Digits must be less than argument's length."
+    raise ArgumentError.new(error_message) if str.length < digits
     str.chars.each_cons(digits).map(&:join)
   end
 
