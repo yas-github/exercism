@@ -2,7 +2,7 @@ class Phrase
   attr_reader :words
 
   def initialize(phrase)
-    phrase = phrase.gsub(/[\n\.\$\^:,!&@%(?<= )''(?= )]/, " ")
+    phrase = phrase.gsub(/[\n\.\$\^:,!&@%]|(?<= )'|'(?= )/, " ")
     @words = phrase.split(" ").map(&:downcase)
   end
 
