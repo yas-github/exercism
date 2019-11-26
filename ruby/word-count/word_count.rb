@@ -1,17 +1,14 @@
 class Phrase
   attr_reader :words
-  # REGEX = /[^\b[\w']+\b]/
-  REGEX = /[\n\.\$\^:,!&@%]|(?<= )'|'(?= )/
+  REGEX = /\b[\w']+\b/
 
   def initialize(phrase)
-    phrase = phrase.gsub(REGEX, " ")
-    @words = phrase.split(" ").map(&:downcase)
+    @words = phrase.scan(REGEX).map(&:downcase)
   end
 
   def word_count
-    words.each_with_object(counts = {}) do |word|
+    words.each_with_object({}) do |word, counts|
       counts[word] = words.count(word)
     end
-    counts
   end
 end
