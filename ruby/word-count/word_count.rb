@@ -7,8 +7,8 @@ class Phrase
   end
 
   def word_count
-    words.each_with_object({}) do |word, counts|
-      counts[word] = words.count(word)
+    words.each_with_object(Hash.new(0)) do |word, counts|
+      counts[word] += 1
     end
   end
 end
